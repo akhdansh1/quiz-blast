@@ -10,7 +10,7 @@
 
 **Interactive real-time multiplayer quiz platform for webinars, classrooms, and events**
 
-[Live Demo](#) • [Report Bug](https://github.com/yourusername/quiz-blast/issues) • [Request Feature](https://github.com/yourusername/quiz-blast/issues)
+[Live Demo](https://quiz-green-chi-64.vercel.app/) • [Report Bug](https://github.com/yourusername/quiz-blast/issues) • [Request Feature](https://github.com/yourusername/quiz-blast/issues)
 
 </div>
 
@@ -47,11 +47,11 @@
 
 ### Host View
 
-![Host Dashboard](https://via.placeholder.com/800x400/667eea/ffffff?text=Host+Dashboard+-+Monitor+Players+in+Real-time)
+![Host Dashboard] (https://quiz-green-chi-64.vercel.app/)
 
 ### Player View
 
-![Player Screen](https://via.placeholder.com/800x400/764ba2/ffffff?text=Player+Screen+-+Self-Paced+Quiz)
+![Player Screen] (https://quiz-green-chi-64.vercel.app/?room=Q6XHZM&mode=player)
 
 ### Results
 
@@ -321,7 +321,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
 
-Project Link: [https://github.com/yourusername/quiz-blast](https://github.com/yourusername/quiz-blast)
+Project Link: https://quiz-green-chi-64.vercel.app/
 
 ---
 
