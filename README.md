@@ -319,7 +319,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Linkedin - (www.linkedin.com/in/akhdan-shalahudin-12232b271)
 
 Project Link: https://quiz-green-chi-64.vercel.app/
 
