@@ -21,6 +21,108 @@ const database = getDatabase(app);
 
 // DEMO QUESTIONS BANK
 const QUESTION_BANK = {
+  'ai-mahasiswa': [
+    {
+      question: "Apa peran utama AI dalam kehidupan akademik mahasiswa?",
+      options: [
+        "Menggantikan proses belajar mahasiswa",
+        "Sebagai alat bantu belajar, bukan pengganti belajar",
+        "Mengerjakan semua tugas mahasiswa",
+        "Menghilangkan kebutuhan membaca buku"
+      ],
+      correctAnswer: 1
+    },
+    {
+      question: "Manakah yang BUKAN termasuk manfaat AI bagi mahasiswa?",
+      options: [
+        "Mempercepat pencarian dan pemahaman materi",
+        "Membantu brainstorming ide tugas atau skripsi",
+        "Menggantikan kemampuan berpikir kritis mahasiswa",
+        "Meningkatkan produktivitas dan efisiensi waktu"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Apa yang dimaksud dengan 'hallucination' dalam konteks AI?",
+      options: [
+        "AI memberikan informasi yang tidak selalu benar",
+        "AI membuat pengguna berhalusinasi",
+        "AI hanya bisa digunakan malam hari",
+        "AI memberikan jawaban yang terlalu panjang"
+      ],
+      correctAnswer: 0
+    },
+    {
+      question: "Bagaimana cara penggunaan AI yang BENAR menurut materi?",
+      options: [
+        "Copy-paste jawaban AI tanpa membaca",
+        "Gunakan AI sebagai alat bantu, periksa kembali jawabannya",
+        "Gunakan AI saat ujian tanpa izin",
+        "Percaya 100% pada jawaban AI"
+      ],
+      correctAnswer: 1
+    },
+    {
+      question: "Apa bahaya penggunaan AI secara berlebihan?",
+      options: [
+        "Meningkatkan kemampuan berpikir kritis",
+        "Mempercepat pemahaman konsep",
+        "Menurunkan kemampuan berpikir kritis dan ketergantungan teknologi",
+        "Membuat lebih mudah lulus ujian"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Contoh penggunaan AI yang TEPAT adalah:",
+      options: [
+        "Menyalin seluruh essay dari ChatGPT",
+        "Meminta AI mengerjakan ujian",
+        "Meminta penjelasan ulang materi yang sulit dipahami",
+        "Menggunakan AI untuk semua tugas tanpa berpikir"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "Apa yang harus dilakukan setelah mendapat jawaban dari AI?",
+      options: [
+        "Langsung submit tanpa membaca",
+        "Fact-check dan verifikasi dengan sumber terpercaya",
+        "Share ke semua teman",
+        "Simpan tanpa dipahami"
+      ],
+      correctAnswer: 1
+    },
+    {
+      question: "Kesalahan umum mahasiswa dalam menggunakan AI:",
+      options: [
+        "Memverifikasi kebenaran informasi",
+        "Menggunakan prompt yang jelas",
+        "Tidak memahami isi tugas yang dikumpulkan",
+        "Kombinasikan hasil AI dengan pemikiran sendiri"
+      ],
+      correctAnswer: 2
+    },
+    {
+      question: "AI seperti ChatGPT, Grammarly, dan Google Gemini digunakan untuk:",
+      options: [
+        "Menggantikan dosen dan guru",
+        "Membantu mengerjakan tugas dan memahami materi",
+        "Menghilangkan kebutuhan belajar",
+        "Membuat mahasiswa malas"
+      ],
+      correctAnswer: 1
+    },
+    {
+      question: "Prinsip utama penggunaan AI yang bertanggung jawab:",
+      options: [
+        "Gunakan AI untuk hasil akhir, bukan proses",
+        "Hindari cross-check informasi",
+        "Gunakan AI untuk membantu proses, bukan hasil akhir",
+        "Gunakan AI saat ujian individu"
+      ],
+      correctAnswer: 2
+    }
+  ],
   'webinar': [
     {
       question: "Mengapa tahun 2026 dianggap berbeda bagi programmer pemula dibandingkan tahun-tahun sebelumnya?",
@@ -237,8 +339,17 @@ const LiveQuizPlatform = () => {
   const getQuestionsForTopic = (topic) => {
     const lowerTopic = topic.toLowerCase();
     
+    // Check for AI/mahasiswa topic keywords
+    if (lowerTopic.includes('ai') || 
+        lowerTopic.includes('artificial') ||
+        lowerTopic.includes('intelligence') ||
+        lowerTopic.includes('mahasiswa') ||
+        lowerTopic.includes('chatgpt') ||
+        lowerTopic.includes('gemini')) {
+      return QUESTION_BANK['ai-mahasiswa'];
+    }
     // Check for webinar/programming topic keywords
-    if (lowerTopic.includes('webinar') || 
+    else if (lowerTopic.includes('webinar') || 
         lowerTopic.includes('programming') || 
         lowerTopic.includes('programmer') ||
         lowerTopic.includes('pemula') ||
@@ -775,7 +886,7 @@ const LiveQuizPlatform = () => {
                   />
 
                   <div className="bg-white/5 rounded-lg p-3 text-xs text-cyan-200">
-                    💡 Available topics: <span className="font-bold">Webinar, JavaScript, React, Indonesia, General Knowledge</span>
+                    💡 Available topics: <span className="font-bold">AI Mahasiswa, Webinar Programming, JavaScript, React, Indonesia, General</span>
                   </div>
 
                   <button
